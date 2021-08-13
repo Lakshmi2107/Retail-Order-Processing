@@ -25,6 +25,7 @@ public class OrderService {
 	{
 		orderrepository.save(order);
 		jmsTemplate.convertAndSend(queue, order);	
+		System.out.println("Order published");
 		return order;
 	}
 	
