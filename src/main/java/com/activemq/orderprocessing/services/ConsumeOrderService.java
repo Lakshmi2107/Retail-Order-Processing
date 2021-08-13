@@ -26,6 +26,7 @@ public class ConsumeOrderService {
 			{
 				order.setOrderStatus("PROCESSED");
 				orderrepository.save(order);
+				System.out.println("Order message received");
 			}
 		}
 		
